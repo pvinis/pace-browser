@@ -1,6 +1,9 @@
 import { Text, View } from "react-native";
+import { verifyInstallation } from "nativewind";
 
 export default function Index() {
+  verifyInstallation();
+
   return (
     <View
       style={{
@@ -9,7 +12,10 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>Edit app/index.tsx to edi this screen.</Text>
+      <View className="bg-red-500">
+        <Text>Hello</Text>
+      </View>
     </View>
   );
 }
