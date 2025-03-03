@@ -4,6 +4,6 @@ const { withNativeWind } = require("nativewind/metro");
 /** @type {import('expo/metro-config').MetroConfig} */
 let config = getDefaultConfig(__dirname);
 
-config = withNativeWind(config, { input: "./global.css", inlineRem: 16 });
+config = withNativeWind(config, { input: "./src/global.css", inlineRem: 16 });
 
 module.exports = config;
