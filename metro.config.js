@@ -6,4 +6,6 @@ let config = getDefaultConfig(__dirname);
 
 config = withNativeWind(config, { input: "./src/global.css", inlineRem: 16 });
 
+config.resolver.sourceExts.push("sql");
+
 module.exports = config;

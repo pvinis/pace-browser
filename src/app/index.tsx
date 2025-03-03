@@ -3,6 +3,8 @@ import { TextInput, View } from "react-native";
 import { KeyboardStickyView } from "react-native-keyboard-controller";
 import { WebView } from "react-native-webview";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { db } from "@/storage/db";
+import { schema } from "@@/db/schema";
 
 export default function Index() {
   const [url, setUrl] = useState("https://google.com");
@@ -12,6 +14,9 @@ export default function Index() {
   const goToUrl = () => {
     setUri(url);
   };
+
+  const tabs = db.select().from(schema.tabs);
+  console.log({ tabs });
 
   return (
     <View className="flex-1 bg-red-500 py-safe">
